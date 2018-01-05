@@ -18,5 +18,5 @@ end
 # Testing Private Endpoints
 KrakenClient.configure do |config|
   config.api_key    = ENV['KRAKEN_API_KEY']    || 'COMPUTED'
-  config.api_secret = ENV['KRAKEN_API_SECRET'] ||'COMPUTED'
+  config.api_secret = ENV['KRAKEN_API_SECRET'] || 'COMPUTED'
 end

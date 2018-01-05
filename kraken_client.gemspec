@@ -14,13 +14,13 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler', '~> 1.10'
-  spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'spectus', '~> 2.3.1'
+  spec.add_development_dependency 'rake', '~> 12.3'
+  spec.add_development_dependency 'spectus', '~> 2.3'
   spec.add_development_dependency 'pry'
-  spec.add_development_dependency 'webmock'
-  spec.add_development_dependency 'vcr'
-  spec.add_development_dependency 'yard', '~> 0.9.11'
-  spec.add_development_dependency 'simplecov', '~> 0.7.1'
+  spec.add_development_dependency 'webmock', '~> 3.2'
+  spec.add_development_dependency 'vcr', '~> 4'
+  spec.add_development_dependency 'yard', '~> 0.9'
+  spec.add_development_dependency 'simplecov', '~> 0.15'
   spec.add_development_dependency 'codeclimate-test-reporter'
 
   spec.add_dependency 'httparty'
