@@ -7,8 +7,22 @@ end
 module KrakenClient
   extend KrakenClient::Configurable
 
+  def self.root
+    File.expand_path('..', __FILE__)
+  end
+
   def self.load(params = {})
     KrakenClient::Application.new(params)
+  end
+
+  class << self
+    attr_writer :logger
+
+    def logger
+      @logger ||= Logger.new($stdout).tap do |log|
+        log.progname = self.name
+      end
+    end
   end
 
 end

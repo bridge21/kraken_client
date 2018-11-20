@@ -7,11 +7,16 @@ module KrakenClient
         response = request_manager.call(url, endpoint_name, args)
 
         if response.is_a?(Array) && response.first.match(/^E[\w]+:/)
+          KrakenClient.logger.error("Kraken Error Response #{response.first} from #{args}")
           fail ErrorResponse.new(response.first)
+
         elsif response == "error"
+          KrakenClient.logger.error("Kraken General Error Response #{response} from #{args}")
           fail ErrorResponse.new(response)
+
         else
           response.with_indifferent_access
+
         end
       end
 
